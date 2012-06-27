@@ -16,7 +16,7 @@ typedef struct _scope{
     AutoReleasePool* pool;
 }Scope;
 
-static Scope* CURRENT_SCOPE;
+static Scope* CURRENT_SCOPE = NULL;
 
 static Scope* newScope(){
     Scope* res = malloc(sizeof(Scope));
