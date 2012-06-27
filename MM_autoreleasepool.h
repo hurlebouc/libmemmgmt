@@ -14,7 +14,7 @@ typedef struct _autoreleasepool{
     struct _autoreleasepool* next;
 }AutoReleasePool;
 
-AutoReleasePool* newAutoPeleasePool();
+AutoReleasePool* newAutoReleasePool();
 void drain(AutoReleasePool*);
 void autorelease(void*);
 

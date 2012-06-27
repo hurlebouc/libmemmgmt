@@ -23,7 +23,7 @@ static Scope* newScope(){
     return res;
 }
 
-AutoReleasePool* newAutoPeleasePool(){
+AutoReleasePool* newAutoReleasePool(){
     AutoReleasePool* res = malloc(sizeof(AutoReleasePool));
     res->obj = NULL;
     res->next = NULL;
