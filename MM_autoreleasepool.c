@@ -12,7 +12,7 @@
 #include "MM_autoreleasepool.h"
 
 typedef struct _scope{
-    struct _scope* SurroudingScope;
+    struct _scope* SurroundingScope;
     AutoReleasePool* pool;
 }Scope;
 
@@ -28,7 +28,7 @@ AutoReleasePool* newAutoPeleasePool(){
     res->obj = NULL;
     res->next = NULL;
     Scope* newscope = newScope();
-    newscope->SurroudingScope = CURRENT_SCOPE;
+    newscope->SurroundingScope = CURRENT_SCOPE;
     newscope->pool = res;
     CURRENT_SCOPE = newscope;
     return res;
@@ -61,4 +61,7 @@ void drain(AutoReleasePool* pool){
         free(tete);
         tete = next;
     }
+    Scope* surroundingScope = CURRENT_SCOPE->SurroundingScope;
+    free(CURRENT_SCOPE);
+    CURRENT_SCOPE = surroundingScope;
 }
