@@ -12,9 +12,9 @@
 typedef struct _info{
     int compteur;
     void (* terminate)(void *);
-}info;
+}Info;
 
-info* newMMInfo(void (* terminate)(void *));
+Info* newMMInfo(void (* terminate)(void *));
 void retain(void*);
 void release(void*);
 

@@ -12,11 +12,11 @@
 #include "MM_base.h"
 
 typedef struct{
-    info* info;
+    Info* info;
 }struct_aux;
 
-info* newMMInfo(void (* terminate)(void *)){
-    info* res = malloc(sizeof(info));
+Info* newMMInfo(void (* terminate)(void *)){
+    Info* res = malloc(sizeof(Info));
     res->compteur = 1;
     res->terminate = terminate;
     return res;
@@ -31,7 +31,7 @@ void release(void* this){
     struct_aux* aux = this;
     aux->info->compteur--;
     if (aux->info->compteur == 0) {
-        info* info = aux->info;
+        Info* info = aux->info;
         info->terminate(this);
         free(info);
     }
