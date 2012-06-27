@@ -9,5 +9,13 @@
 #ifndef libmemmgmt_base_h
 #define libmemmgmt_base_h
 
+typedef struct _info{
+    int compteur;
+    void (* terminate)(void *);
+}info;
+
+info* newMMInfo(void (* terminate)(void *));
+void retain(void*);
+void release(void*);
 
 #endif

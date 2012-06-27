@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B492D166159B9B4E00EED4AF /* MM_autoreleasepool.c in Sources */ = {isa = PBXBuildFile; fileRef = B492D165159B9B4E00EED4AF /* MM_autoreleasepool.c */; };
 		B4C252F715963CFA002E123A /* MM_base.c in Sources */ = {isa = PBXBuildFile; fileRef = B4C252F615963CFA002E123A /* MM_base.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B492D165159B9B4E00EED4AF /* MM_autoreleasepool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MM_autoreleasepool.c; sourceTree = "<group>"; };
+		B492D168159B9B5E00EED4AF /* MM_autoreleasepool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MM_autoreleasepool.h; sourceTree = "<group>"; };
 		B4C252E815963938002E123A /* liblibmemmgmt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibmemmgmt.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C252F515963C97002E123A /* MM_base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MM_base.h; sourceTree = "<group>"; };
 		B4C252F615963CFA002E123A /* MM_base.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MM_base.c; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C252F615963CFA002E123A /* MM_base.c */,
+				B492D165159B9B4E00EED4AF /* MM_autoreleasepool.c */,
 			);
 			name = sources;
 			sourceTree = "<group>";
@@ -56,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				B4C252F515963C97002E123A /* MM_base.h */,
+				B492D168159B9B5E00EED4AF /* MM_autoreleasepool.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C252F715963CFA002E123A /* MM_base.c in Sources */,
+				B492D166159B9B4E00EED4AF /* MM_autoreleasepool.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
